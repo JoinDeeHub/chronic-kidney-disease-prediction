@@ -68,9 +68,45 @@ This project applies machine learning techniques to predict Chronic Kidney Disea
 
 ## 🚀 Deployment Ready
 
-You can load the `.pkl` model in a Streamlit or Flask app for real-time CKD predictions.
+You can load the `.sav` model in a Streamlit or Flask app for real-time CKD predictions.
 
 ```python
-import pickle
-with open("random_forest_classification_model.pkl", "rb") as f:
-    model = pickle.load(f)
+# Save the model as .sav
+model_path = "ckd_rf_model.sav"
+joblib.dump(model, model_path)
+
+# Save scaler too for deployment use
+scaler_path = "ckd_scaler.sav"
+joblib.dump(scaler, scaler_path)
+
+---
+
+## 📝 How to Use
+
+1. **Clone the repository**  
+  ```bash
+  git clone https://github.com/yourusername/chronic-kidney-disease-prediction.git
+  cd chronic-kidney-disease-prediction
+  ```
+
+2. **Install dependencies**  
+  ```bash
+  pip install -r requirements.txt
+  ```
+
+3. **Run the notebook**  
+  Open `chronic_kidney_disease_prediction.ipynb` in Jupyter Notebook or VS Code to explore EDA, preprocessing, and model training steps.
+
+4. **Deploy the model**  
+  Use the provided `.pkl` or `.sav` files (`random_forest_classification_model.pkl`, `ckd_rf_model.sav`, and `ckd_scaler.sav`) in your preferred deployment framework (e.g., Streamlit or Flask) for real-time predictions.
+
+5. **Sample prediction**  
+  See `CKD_Model_Deployment_Deepika.ipynb` for an example of loading the model and making predictions on new data.
+
+---
+
+## 🚀 Streamlit App
+
+# streamlit app for Chronic Kidney Disease (CKD) prediction
+# This app allows users to input clinical data and get predictions on CKD status using a pre-trained machine learning model.
+ 
