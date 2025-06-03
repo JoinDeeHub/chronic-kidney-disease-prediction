@@ -107,6 +107,7 @@ joblib.dump(scaler, scaler_path)
 
 ## 🚀 Streamlit App
 
-# streamlit app for Chronic Kidney Disease (CKD) prediction
-# This app allows users to input clinical data and get predictions on CKD status using a pre-trained machine learning model.
+### streamlit app for Chronic Kidney Disease (CKD) prediction
+### This app allows users to input clinical data and get predictions on CKD status using a pre-trained machine learning model.
  
+[Streamlit.pdf|https://github.com/JoinDeeHub/chronic-kidney-disease-prediction/blob/main/Streamlit.pdf]
