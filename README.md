@@ -66,7 +66,7 @@ This project applies machine learning techniques to predict Chronic Kidney Disea
 
 ---
 
-## 🚀 Deployment Ready
+##  Deployment Ready
 
 You can load the `.sav` model in a Streamlit or Flask app for real-time CKD predictions.
 
@@ -105,7 +105,7 @@ joblib.dump(scaler, scaler_path)
 
 ---
 
-## 🚀 Streamlit App
+##  Streamlit App
 
 # streamlit app for Chronic Kidney Disease (CKD) prediction
 # This app allows users to input clinical data and get predictions on CKD status using a pre-trained machine learning model.
