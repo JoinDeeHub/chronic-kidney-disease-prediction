@@ -110,3 +110,48 @@ joblib.dump(scaler, scaler_path)
 # streamlit app for Chronic Kidney Disease (CKD) prediction
 # This app allows users to input clinical data and get predictions on CKD status using a pre-trained machine learning model.
  
+# Building and Running Containers
+
+Build the Docker image:
+docker-compose build
+
+Start the containers:
+docker-compose up -d
+
+(AI) deehub@deehub:~/JoinDeeHub/chronic-kidney-disease-prediction$ sudo docker-compose ps
+NAME                IMAGE               COMMAND             SERVICE             CREATED             STATUS              PORTS
+
+(AI) deehub@deehub:~/JoinDeeHub/chronic-kidney-disease-prediction$ sudo docker-compose up
+[+] Running 1/0
+ ⠿ Container ckd-predictor  Created                                                                                                  0.0s
+Attaching to ckd-predictor
+ckd-predictor  | 
+ckd-predictor  | Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.
+ckd-predictor  | 
+ckd-predictor  | 
+ckd-predictor  |   You can now view your Streamlit app in your browser.
+ckd-predictor  | 
+ckd-predictor  |   URL: http://0.0.0.0:8501
+ckd-predictor  | 
+^Z
+[14]+  Stopped                 sudo docker-compose up
+
+(AI) deehub@deehub:~/JoinDeeHub/chronic-kidney-disease-prediction$ sudo docker-compose ps
+NAME                IMAGE                                       COMMAND                  SERVICE             CREATED              STATUS              PORTS
+ckd-predictor       chronic-kidney-disease-prediction-ckd-app   "streamlit run src/a…"   ckd-app             About a minute ago   Up 11 seconds       0.0.0.0:8501->8501/tcp, :::8501->8501/tcp
+
+(AI) deehub@deehub:~/JoinDeeHub/chronic-kidney-disease-prediction$ sudo docker-compose down
+[+] Running 2/2
+ ⠿ Container ckd-predictor                            Removed                                                                        0.5s
+ ⠿ Network chronic-kidney-disease-prediction_default  Removed                                                                        0.1s
+
+(AI) deehub@deehub:~/JoinDeeHub/chronic-kidney-disease-prediction$ sudo docker-compose ps
+NAME                IMAGE               COMMAND             SERVICE             CREATED 
+
+
+
+View application logs:
+docker-compose logs -f web
+
+Stop containers:
+docker-compose down
